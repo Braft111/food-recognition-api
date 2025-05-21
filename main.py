@@ -5,7 +5,7 @@ import numpy as np
 from io import BytesIO
 import os
 
-app = FastAPI()
+app = FastAPI(docs_url="/docs", redoc_url="/redoc", openapi_url="/openapi.json")
 
 # Загружаем модель
 model = load_model("food101_mobilenetv2_15epochs.h5")
